@@ -7,7 +7,7 @@ type AppModel = {
 type History = {
     current: number,
     presStates: Array<Presentation>
-}
+}о
 
 type Presentation = {
     readonly title: string,
@@ -36,9 +36,13 @@ type BackGround = {
     readonly "backImg": string
 }
 
-type TextElement = {
+type SlideElement = {
     readonly "id": number,
     readonly "layer": number,
+    readonly "elementType": TextElement | Img | Shape
+}
+
+type TextElement = {
     readonly "str": string,
     readonly "font": string,
     readonly "fontSize": number,
@@ -52,40 +56,32 @@ type Point = {
 }
 
 type Img = {
-    readonly "id": number,
-    readonly "layer": number,
     readonly "imgData": string,
     readonly "position": Point,
     readonly "width": number,
     readonly "height": number
 }
 
-type Circle = {
-    readonly "id": number,
-    readonly "layer": number,
-    readonly "radius": number,
-    readonly "position": Point,
+type Shape = {
     readonly "color": string,
-    readonly "borderColor": string
+    readonly "borderColor": string,
+    readonly "shapeType": Circle | Rectangle | Triangle
+}
+
+type Circle = {
+    readonly "radius": number,
+    readonly "position": Point
 }
 
 type Rectangle = {
-    readonly "id": number,
-    readonly "layer": number,
     readonly "leftTop": Point,
-    readonly "rightBottom": Point,
-    readonly "color": string,
-    readonly "borderColor": string
+    readonly "rightBottom": Point
 }
 
 type Triangle = {
-    readonly "id": number,
-    readonly "layer": number,
     readonly "position1": Point,
     readonly "position2": Point,
-    readonly "position3": Point,
-    readonly "color": string,
-    readonly "borderColor": string
+    readonly "position3": Point
 }
 
 export {
