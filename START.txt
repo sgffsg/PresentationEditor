@@ -1,5 +1,5 @@
 npm install typescript --save-dev
-npm i stylelint
-npm i prettier
-npm i eslint
+npm i stylelint --legacy-peer-deps
+npm i prettier --legacy-peer-deps
+npm i eslint --legacy-peer-deps
 npm install
