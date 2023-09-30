@@ -7,7 +7,7 @@ type AppModel = {
 type History = {
     current: number,
     presStates: Array<Presentation>
-}о
+}
 
 type Presentation = {
     readonly title: string,
@@ -24,11 +24,7 @@ type SelectionType = {
 type Slide = {
     readonly "ID": number,
     readonly "backGround": BackGround,
-    readonly "texts": Array<TextElement>,
-    readonly "imgs": Array<Img>,
-    readonly "circles": Array<Circle>,
-    readonly "rectangles": Array<Rectangle>,
-    readonly "triangles": Array<Triangle>
+    readonly "slideElements": Array<SlideElement>,
 }
 
 type BackGround = {
@@ -85,7 +81,18 @@ type Triangle = {
 }
 
 export {
-    AppModel, History, Presentation, SelectionType,
-    BackGround, TextElement, Point, Img,
-    Circle, Rectangle, Triangle, Slide
+    AppModel, 
+    History, 
+    Presentation, 
+    SelectionType,
+    Slide,
+    SlideElement,
+    BackGround, 
+    TextElement, 
+    Img,
+    Point, 
+    Shape,
+    Circle, 
+    Rectangle, 
+    Triangle, 
 }
